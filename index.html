@@ -1,2 +1,38 @@
+<h1> see all dbs </h1>
+<p> show dbs;</p>
+
 <h1> create DB</h1>
 <p> use TestDb </p>
+
+<h1>see current Db</h1>
+<p>db;</p>
+
+<h1>create collection</h1>
+<p>db.createCollection('collection_name', options)</p>
+
+<h1>drop collection</h1>
+<p>db.collection_name.drop()</p>
+
+<h1>insert one or more documents</h1>
+<p>db.collection_name.insert({})</p>
+
+<h1>insert one document</h1>
+<p>db.collection_name.insertOne({})</p>
+
+<h1>insert many documents</h1>
+<p><h1>insert document</h1>
+<p>db.collection_name.insertMany([{}])</p>
+
+<h1>query document</h1>
+<p>dn.collection_name.find()</p>
+
+<h1>find certain element</h1>
+<p>db.collection_name.find({key: value})</p>
+
+<h1>pretty document</h1>
+<p>db.collection_name.find().pretty()</p>
+
+<h1>filter some keys while querying</h1>
+<p>db.collection_name.find({key:value}, {remove_from_query_list: 0, include_in_query_list:1})</p>
+
+
