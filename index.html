@@ -35,4 +35,21 @@
 <h1>filter some keys while querying</h1>
 <p>db.collection_name.find({key:value}, {remove_from_query_list: 0, include_in_query_list:1})</p>
 
+<h1>update the document </h1>
+<p>db.collection_name.update({key: value}, {$set: {key: value}})</p>
+
+<h1>remove document</h1>
+<p>db.collection_name.remove({key:value})</p>
+
+
+<h1>remove one document</h1>
+<p>db.collection_name.deleteOne({key:value})</p>
+
+
+<h1>remove many document</h1>
+<p>db.collection_name.deleteMany({key:value})</p>
+
+<h1>aggregation</h1>
+<p>db.collection_name.aggragate({$group/match: {_id: 'id', some_var: {$sum: 1} }})</p>
+
 
