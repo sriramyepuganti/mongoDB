@@ -50,6 +50,18 @@
 <p>db.collection_name.deleteMany({key:value})</p>
 
 <h1>aggregation</h1>
-<p>db.collection_name.aggragate({$group/match: {_id: 'id', some_var: {$sum: 1} }})</p>
+<p>$project (filter some keys while querying):  db.collection_name.aggregate({$project: {feild: 0, feild:1}})</p>
+<p>$sort (1 for asc and -1 for desc): db.collection_name.aggregate({$sort: { feild:1 }})</p>
+<p>$limit (show total record): db.collection_name.aggregate({$limit: +ve integer})</p>
+<p>$skip (start from): db.collection_name.aggregate({$skip: +ve integer})</p>
+<p>$unwind: 
+    ex: db.inventory.insertOne({ "_id" : 1, "item" : "ABC1", sizes: [ "S", "M", "L"] })
+    db.inventory.aggregate( [ { $unwind : "$sizes" } ] )
+    o/p: { "_id" : 1, "item" : "ABC1", "sizes" : "S" }
+    { "_id" : 1, "item" : "ABC1", "sizes" : "M" }
+    { "_id" : 1, "item" : "ABC1", "sizes" : "L" }
+</p>
+<p>$match:  db.collection_name.aggregate({$match: {age: 18}})</p>
+<p>$group: db.collection_name.aggragate({$group: {_id: 'id', some_var: {$sum: 1} }})</p>
 
 
